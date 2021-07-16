@@ -16,7 +16,7 @@ print(f"NUmber of contours = {str(len(contours))}")
 #drawing contours
 cv2.drawContours(img, contours, -1, (255, 255, 255), 1)
 
-#function to identify contours
+#function to identify centroids
 def identify_centroid(image, centroid):
     cent_moment = cv2.moments(centroid)
     centroid_x = int(cent_moment['m10']/cent_moment['m00'])
